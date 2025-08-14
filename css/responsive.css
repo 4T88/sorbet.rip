@@ -1,0 +1,236 @@
+/* responsive design for sorbet.rip */
+
+/* tablet */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .site-title {
+        font-size: 20px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    nav a {
+        font-size: 11px;
+    }
+    
+    .boards-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .board-header, .thread-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .board-title, .thread-title {
+        font-size: 16px;
+    }
+    
+    .threads-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .thread-card {
+        padding: 12px;
+    }
+    
+    .post {
+        padding: 12px;
+    }
+    
+    .form-group input, .form-group textarea {
+        font-size: 11px;
+        padding: 6px;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+    
+    .motd {
+        padding: 12px;
+        font-size: 13px;
+    }
+    
+    .stats {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+}
+
+/* mobile */
+@media (max-width: 480px) {
+    main {
+        padding: 0 10px;
+    }
+    
+    .header-content {
+        padding: 0 10px;
+    }
+    
+    .site-title {
+        font-size: 18px;
+    }
+    
+    nav ul {
+        gap: 10px;
+    }
+    
+    nav a {
+        font-size: 10px;
+    }
+    
+    .board-card {
+        padding: 12px;
+    }
+    
+    .board-name {
+        font-size: 14px;
+    }
+    
+    .board-title {
+        font-size: 12px;
+    }
+    
+    .board-description {
+        font-size: 11px;
+    }
+    
+    .board-stats {
+        font-size: 10px;
+    }
+    
+    .thread-subject {
+        font-size: 12px;
+    }
+    
+    .thread-preview {
+        font-size: 11px;
+        max-height: 50px;
+    }
+    
+    .thread-meta {
+        font-size: 10px;
+    }
+    
+    .post-header {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .post-number {
+        font-size: 11px;
+    }
+    
+    .post-name {
+        font-size: 11px;
+    }
+    
+    .post-timestamp {
+        font-size: 10px;
+    }
+    
+    .post-content {
+        font-size: 11px;
+    }
+    
+    .new-thread-form, .reply-form {
+        padding: 15px;
+    }
+    
+    .new-thread-form h3, .reply-form h3 {
+        font-size: 14px;
+    }
+    
+    .form-group label {
+        font-size: 11px;
+    }
+    
+    .form-group textarea {
+        min-height: 80px;
+    }
+    
+    .motd {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .stats {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+    
+    .stat-item {
+        margin: 0 5px;
+    }
+}
+
+/* landscape mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .header-content {
+        flex-direction: row;
+    }
+    
+    .boards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* high dpi displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    body {
+        font-size: 13px;
+    }
+    
+    .site-title {
+        font-size: 22px;
+    }
+    
+    .board-name {
+        font-size: 15px;
+    }
+    
+    .thread-subject {
+        font-size: 12px;
+    }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .konami-active {
+        animation: none;
+    }
+}
+
+/* print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .btn, .new-thread-form, .reply-form {
+        display: none;
+    }
+    
+    .board-card, .thread-card, .post {
+        border: 1px solid #ccc;
+        break-inside: avoid;
+    }
+}

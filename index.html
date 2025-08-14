@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorbet.rip - anonymous imageboard</title>
+    <link rel="icon" type="image/png" href="images/favicon.png?v=2">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png?v=2">
+    <link rel="apple-touch-icon" href="images/favicon.png?v=2">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="site-title">
+                <img src="images/favicon.png" alt="sorbet.rip" class="site-logo">
+                sorbet.rip
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li class="theme-selector">
+                        <button class="theme-btn" onclick="toggleThemeDropdown()">theme</button>
+                        <div class="theme-dropdown" id="theme-dropdown">
+                            <div class="theme-option active" data-theme="dark" onclick="changeTheme('dark')">dark</div>
+                            <div class="theme-option" data-theme="light" onclick="changeTheme('light')">light</div>
+                            <div class="theme-option" data-theme="classic" onclick="changeTheme('classic')">classic</div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="motd" id="motd"></div>
+        
+        <div class="boards-grid" id="boards-grid"></div>
+        
+        <div class="stats">
+            <span class="stat-item">posts: <span id="total-posts">0</span></span>
+            <span class="stat-item">threads: <span id="total-threads">0</span></span>
+            <span class="stat-item">users online: <span id="users-online">1</span></span>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <span class="footer-text">sorbet.rip - anonymous imageboard</span>
+        </div>
+    </footer>
+
+    <script src="js/quotes.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
