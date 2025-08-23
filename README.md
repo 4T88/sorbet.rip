@@ -1,1 +1,1 @@
-broken vibecoded imageboard
+broken imageboard
